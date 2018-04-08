@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div>
+<search></search>
+<a routerLink="/categories">Store Departments</a>
+</div>
+<div class="container">
+  <div>
+    <app-news-and-updates></app-news-and-updates>
+  </div>
+  <div>
+    <div>
+      <span><h2>Shopping Lists</h2>
+        <a routerLink="/shopping-lists" class="glyphicon glyphicon-menu-right"></a>
+      </span>
+    </div>
+    <div>
+      <span>
+        <div>
+          <grid [products]="eveninglist" [viewType]="only_icons" [viewSize]="2x2"></grid>
+          <h3>Evening Shopping List</h3>
+        </div>
+        <div>
+          <grid [products]="weekendlist" [viewType]="only_icons" [viewSize]="2x2"></grid>
+          <h3>Evening Shopping List</h3>
+        </div>
+        <div>
+          <grid [products]="favouritelist" [viewType]="only_icons" [viewSize]="2x2"></grid>
+          <h3>Evening Shopping List</h3>
+        </div>
+      </span>
+    </div>
+  </div>
+  <div>
+      <div>
+        <span><h2>Popular</h2>
+          <a routerLink="/popular-products" class="glyphicon glyphicon-menu-right"></a>
+        </span>
+      </div>
+      <div>
+        <span>
+          <div class="slider">
+            <grid [products]="popular" [viewType]="icon_with_basic_details" [viewSize]="1xn"></grid>
+            <h3>Evening Shopping List</h3>
+          </div>
+      </div>
+    </div>
+    <div>
+      <app-recommendations></app-recommendations>
+    </div>
+</div>
+<app-trailer></app-trailer>
